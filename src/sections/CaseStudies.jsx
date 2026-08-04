@@ -1,11 +1,11 @@
 // Regenerated portfolio sites (built by generator/build-sites.mjs).
 // basic (HTML/CSS) -> sites/<name>/ ; React (standard/premium) -> sites/<name>/build/
 const cases = [
-  { name: 'Piano Bistro', type: 'Restaurant', url: '/dami-builds/sites/piano-bistro/' },
-  { name: 'Tasala Salon', type: 'Beauty salon', url: '/dami-builds/sites/tasala-salon/build/' },
-  { name: 'XO Bakery', type: 'Bakery', url: '/dami-builds/sites/xo-bakery/' },
-  { name: 'IAMFit', type: 'Fitness studio', url: '/dami-builds/sites/iamfit/build/' },
-  { name: 'Akara Republic', type: 'Nigerian restaurant', url: '/dami-builds/sites/akara-republic/build/' },
+  { name: 'Piano Bistro', type: 'Restaurant', url: '/dami-builds/sites/piano-bistro/index.html' },
+  { name: 'Tasala Salon', type: 'Beauty salon', url: '/dami-builds/sites/tasala-salon/build/index.html' },
+  { name: 'XO Bakery', type: 'Bakery', url: '/dami-builds/sites/xo-bakery/index.html' },
+  { name: 'IAMFit', type: 'Fitness studio', url: '/dami-builds/sites/iamfit/build/index.html' },
+  { name: 'Akara Republic', type: 'Nigerian restaurant', url: '/dami-builds/sites/akara-republic/build/index.html' },
 ]
 
 export default function CaseStudies() {
