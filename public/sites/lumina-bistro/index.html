@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumina Bistro & Lounge — Contemporary Dining in Lekki, Lagos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d0f12;
+      --card-bg: #161a20;
+      --gold: #d4af37;
+      --gold-hover: #f1c40f;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --border: rgba(212, 175, 55, 0.2);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    h1, h2, h3 { font-family: 'Cinzel', serif; color: #fff; }
+    .nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: rgba(13, 15, 18, 0.9); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border); backdrop-filter: blur(10px); }
+    .brand { font-size: 1.5rem; font-weight: 700; color: var(--gold); text-decoration: none; letter-spacing: 2px; }
+    .nav-links a { color: var(--muted); text-decoration: none; margin-left: 24px; font-size: 0.95rem; }
+    .nav-links a:hover { color: var(--gold); }
+    .btn { display: inline-block; background: var(--gold); color: #000; padding: 12px 28px; border-radius: 4px; font-weight: 700; text-decoration: none; border: none; cursor: pointer; transition: all 0.2s; }
+    .btn:hover { background: var(--gold-hover); transform: translateY(-2px); }
+    .hero { text-align: center; padding: 100px 20px; background: linear-gradient(rgba(13, 15, 18, 0.85), rgba(13, 15, 18, 0.95)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80') center/cover; }
+    .hero h1 { font-size: 3rem; margin-bottom: 16px; color: #fff; }
+    .hero p { max-width: 600px; margin: 0 auto 30px; font-size: 1.2rem; color: var(--muted); }
+    .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+    .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 40px; color: var(--gold); }
+    .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+    .menu-card { background: var(--card-bg); border: 1px solid var(--border); padding: 24px; border-radius: 8px; }
+    .menu-card-head { display: flex; justify-content: space-between; margin-bottom: 8px; font-weight: 700; font-size: 1.1rem; }
+    .price { color: var(--gold); }
+    .menu-card p { font-size: 0.9rem; color: var(--muted); }
+    .reservation-box { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 40px; max-width: 600px; margin: 0 auto; text-align: center; }
+    .form-group { margin-bottom: 20px; text-align: left; }
+    .form-group label { display: block; margin-bottom: 8px; font-size: 0.9rem; color: var(--muted); }
+    .form-group input, .form-group select { width: 100%; padding: 12px; background: #0d0f12; border: 1px solid var(--border); color: #fff; border-radius: 6px; }
+    footer { text-align: center; padding: 40px; background: #07080a; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a href="#" class="brand">LUMINA BISTRO</a>
+    <div class="nav-links">
+      <a href="#about">Story</a>
+      <a href="#menu">Menu</a>
+      <a href="#reserve">Reserve Table</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Artisanal Dining in Lekki</h1>
+    <p>Where contemporary African culinary craft meets relaxed European bistro culture. Phase 1, Lekki, Lagos.</p>
+    <a href="#reserve" class="btn">Reserve a Table</a>
+  </section>
+
+  <div class="container" id="menu">
+    <h2 class="section-title">Chef's Selection</h2>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <div class="menu-card-head">
+          <span>Pan-Seared Suya Ribeye</span>
+          <span class="price">₦28,500</span>
+        </div>
+        <p>Aged ribeye steak rubbed with artisan Hausa spice blend, served with truffled yam fondant.</p>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-head">
+          <span>Smoked Seafood Tagliatelle</span>
+          <span class="price">₦24,000</span>
+        </div>
+        <p>Fresh hand-cut pasta tossed in chili lemongrass emulsion with jumbo prawns & calamari.</p>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-head">
+          <span>Truffle Asun Arancini</span>
+          <span class="price">₦14,500</span>
+        </div>
+        <p>Crispy risotto balls stuffed with slow-roasted spicy goat meat and melted provolone cheese.</p>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-head">
+          <span>Hibiscus Cacao Fondant</span>
+          <span class="price">₦9,500</span>
+        </div>
+        <p>Warm molten dark chocolate cake infused with Zobo reduction and coconut gelato.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="reserve">
+    <div class="reservation-box">
+      <h2>Table Booking</h2>
+      <p style="margin-bottom: 24px; color: var(--muted);">Book your dining experience in advance.</p>
+      <form onsubmit="event.preventDefault(); alert('Reservation requested! Lumina Bistro team will confirm via SMS.');">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" required placeholder="e.g. Sandra Johnson">
+        </div>
+        <div class="form-group">
+          <label>Date & Time</label>
+          <input type="datetime-local" required>
+        </div>
+        <div class="form-group">
+          <label>Number of Guests</label>
+          <select>
+            <option>2 Guests</option>
+            <option>4 Guests</option>
+            <option>6+ Guests (Private Dining)</option>
+          </select>
+        </div>
+        <button type="submit" class="btn" style="width: 100%;">Confirm Booking</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>📍 Plot 14, Admiralty Way, Lekki Phase 1, Lagos | Open Tue-Sun: 12PM - 11PM</p>
+    <p style="margin-top: 8px;">© Lumina Bistro & Lounge — Built by Dami Builds</p>
+  </footer>
+</body>
+</html>

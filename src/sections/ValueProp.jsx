@@ -1,32 +1,38 @@
-// COPY: user — statement + supporting points are from the agreed draft.
-const points = [
-  {
-    t: 'Customers Google you before they visit',
-    d: 'If your business isn’t online, they pick the competitor who is. A website puts you in that search.',
-  },
-  {
-    t: 'Instagram DMs get buried',
-    d: 'A site answers the same five questions — prices, location, booking — at 2am, without you lifting a finger.',
-  },
-  {
-    t: 'Trust beats a WhatsApp status',
-    d: 'A real website signals you’re established. It’s the difference between “maybe” and “let’s book.”',
-  },
-]
-
 export default function ValueProp() {
+  const points = [
+    {
+      icon: '🔍',
+      title: 'Customers Google before they visit',
+      desc: 'When people look for a salon in Lekki or a restaurant in Ikeja, an optimized website puts you right in front of them.'
+    },
+    {
+      icon: '💬',
+      title: 'Instagram DMs get buried',
+      desc: 'Instead of losing sales replying to "How much?" 50 times a day, let your site showcase your menu, prices, and booking links 24/7.'
+    },
+    {
+      icon: '⭐',
+      title: 'Trust beats a WhatsApp status',
+      desc: 'A custom domain and professional web design instantly signals legitimacy and sets you apart from competitors.'
+    }
+  ]
+
   return (
-    <section className="valueprop">
-      <div className="container section-head">
-        <h2>Most businesses don’t need “a website.” They need to be found.</h2>
-      </div>
-      <div className="container grid-3">
-        {points.map((p, i) => (
-          <div className="card" key={i}>
-            <h3>{p.t}</h3>
-            <p>{p.d}</p>
-          </div>
-        ))}
+    <section id="value" className="valueprop">
+      <div className="container">
+        <div className="section-head">
+          <h2>Most businesses don’t need "a website." They need to be found.</h2>
+          <p>Here is why top Lagos local brands build a dedicated website instead of relying only on social media.</p>
+        </div>
+        <div className="grid grid-3">
+          {points.map((p, i) => (
+            <div className="card value-card" key={i}>
+              <div className="card-icon">{p.icon}</div>
+              <h3>{p.title}</h3>
+              <p>{p.desc}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )

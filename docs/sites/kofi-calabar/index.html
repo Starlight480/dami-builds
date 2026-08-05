@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kofi & Calabar Kitchen — Authentic Nigerian Delicacies in Lagos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f1410;
+      --card-bg: #18221b;
+      --primary: #22c55e;
+      --orange: #f97316;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --border: #26382c;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    h1, h2, h3 { font-family: 'Outfit', sans-serif; color: #fff; }
+    .header { padding: 18px 40px; background: rgba(15, 20, 16, 0.95); position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); }
+    .brand { font-size: 1.4rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+    .brand span { color: var(--orange); }
+    .hero { text-align: center; padding: 90px 20px; background: linear-gradient(rgba(15, 20, 16, 0.85), rgba(15, 20, 16, 0.95)), url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80') center/cover; }
+    .hero h1 { font-size: 2.8rem; margin-bottom: 14px; }
+    .hero p { max-width: 620px; margin: 0 auto 28px; font-size: 1.15rem; color: var(--muted); }
+    .btn { display: inline-block; background: var(--primary); color: #000; padding: 14px 30px; border-radius: 8px; font-weight: 700; text-decoration: none; border: none; cursor: pointer; }
+    .btn:hover { background: #16a34a; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+    .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 36px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+    .food-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; padding: 20px; }
+    .food-card h3 { margin-bottom: 6px; font-size: 1.2rem; }
+    .price-tag { color: var(--orange); font-weight: 800; font-size: 1.1rem; margin-bottom: 10px; display: block; }
+    .order-box { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 36px; text-align: center; max-width: 540px; margin: 40px auto 0; }
+    footer { text-align: center; padding: 36px; background: #090d0a; border-top: 1px solid var(--border); color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="brand">KOFI & <span>CALABAR</span></a>
+    <a href="#order" class="btn" style="padding: 8px 18px; font-size: 0.9rem;">Order On WhatsApp</a>
+  </header>
+
+  <section class="hero">
+    <h1>Authentic Nigerian Cuisine & Catering</h1>
+    <p>From rich Fisherman Soup and Edikang Ikong to Smoky Party Jollof & Grill trays delivered fresh across Ikeja & Victoria Island.</p>
+    <a href="#order" class="btn">Place Order / Inquiry</a>
+  </section>
+
+  <div class="container">
+    <h2 class="section-title">Popular Dishes</h2>
+    <div class="grid">
+      <div class="food-card">
+        <h3>Calabar Fisherman Soup Special</h3>
+        <span class="price-tag">₦18,500</span>
+        <p>Fresh jumbo prawns, sea crab, snails & croaker fish simmered with native spices and Uziza leaves.</p>
+      </div>
+      <div class="food-card">
+        <h3>Special Party Jollof & Asun Platter</h3>
+        <span class="price-tag">₦12,000</span>
+        <p>Firewood smoky Jollof rice served with peppered goat meat, fried plantains, and moinmoin.</p>
+      </div>
+      <div class="food-card">
+        <h3>Edikang Ikong & Pounded Yam</h3>
+        <span class="price-tag">₦14,000</span>
+        <p>Traditional pumpkin leaf & waterleaf soup enriched with stockfish, goat meat, and cow skin.</p>
+      </div>
+      <div class="food-card">
+        <h3>Charcoal Grilled Tilapia & Chips</h3>
+        <span class="price-tag">₦13,500</span>
+        <p>Whole seasoned fish grilled over open flame with spicy house dip and fried yam chips.</p>
+      </div>
+    </div>
+
+    <div class="order-box" id="order">
+      <h2>Instant Catering & Food Orders</h2>
+      <p style="margin-bottom: 20px; color: var(--muted);">Click below to send your order details straight to our WhatsApp kitchen queue.</p>
+      <button class="btn" onclick="alert('Redirecting to WhatsApp Order Desk...');" style="background: #25D366; color: #fff; width: 100%;">💬 Order via WhatsApp</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>📍 Ikeja GRA & Victoria Island Kitchen Outlets, Lagos | Tel: +234 800 563 4000</p>
+    <p style="margin-top: 6px; font-size: 0.85rem;">© Kofi & Calabar Kitchen — Built by Dami Builds</p>
+  </footer>
+</body>
+</html>

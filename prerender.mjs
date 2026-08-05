@@ -1,9 +1,7 @@
 import { createServer } from 'vite'
-import { readFileSync, writeFileSync } from 'node:fs'
+import { readFileSync, writeFileSync, existsSync } from 'node:fs'
 import { resolve } from 'node:path'
 
-// Prerender: uses Vite to transform JSX, renders App to static HTML,
-// and injects it into dist/index.html so GitHub Pages serves crawlable content.
 const root = resolve(process.cwd())
 const vite = await createServer({
   server: { middlewareMode: true },
@@ -15,14 +13,26 @@ try {
   const { render } = await vite.ssrLoadModule('/src/entry-server.jsx')
   const appHtml = render()
 
-  const distHtmlPath = resolve(root, 'dist/index.html')
-  let template = readFileSync(distHtmlPath, 'utf-8')
+  const htmlPath = resolve(root, 'docs/index.html')
+  if (!existsSync(htmlPath)) {
+    throw new Error(`Target file ${htmlPath} does not exist. Run vite build first.`)
+  }
+
+  let template = readFileSync(htmlPath, 'utf-8')
+  template = template.replace(
+    '<div id="root"><!--app-html--></div>',
+    `<div id="root">${appHtml}</div>`
+  )
   template = template.replace(
     '<div id="root"></div>',
     `<div id="root">${appHtml}</div>`
   )
-  writeFileSync(distHtmlPath, template)
-  console.log('[prerender] injected static HTML into dist/index.html')
+  
+  writeFileSync(htmlPath, template)
+  console.log('[prerender] Successfully injected static SSR HTML into docs/index.html')
+} catch (err) {
+  console.error('[prerender error]', err)
+  process.exit(1)
 } finally {
   await vite.close()
 }

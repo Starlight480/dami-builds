@@ -1,32 +1,59 @@
-import { pricing } from '../data/pricing.js'
+import { pricing, retainers } from '../data/pricing.js'
 
 export default function Pricing() {
   return (
-    <section id="pricing">
+    <section id="pricing" className="pricing">
       <div className="container">
         <div className="section-head">
-          <h2>Simple, transparent pricing</h2>
-          <p>Pick the level of hands-off you want. Every site is built custom.</p>
+          <h2>Clear, Transparent Pricing</h2>
+          <p>Choose the tier that fits your business stage. No hidden setup fees.</p>
         </div>
+
         <div className="pricing-grid">
-          {pricing.map((t) => (
-            <div className={'price-card' + (t.highlight ? ' highlight' : '')} key={t.name}>
-              {t.badge && <span className="badge">{t.badge}</span>}
-              <h3>{t.name}</h3>
-              <p className="tagline">{t.tagline}</p>
-              <div className="price">{t.price}</div>
-              <p className="summary">{t.summary}</p>
-              <a className="btn btn-primary" href="#lead">
-                {t.cta}
-              </a>
+          {pricing.map((p) => (
+            <div className={`price-card ${p.highlight ? 'highlight' : ''}`} key={p.name}>
+              {p.badge && <span className="badge">{p.badge}</span>}
+              <h3>{p.name}</h3>
+              <div className="tagline">{p.tagline}</div>
+              <div className="price">{p.price}</div>
+              <p className="summary">{p.summary}</p>
+              
               <ul className="features">
-                {t.features.map((f, i) => (
+                {p.features.map((f, i) => (
                   <li key={i}>{f}</li>
                 ))}
               </ul>
-              <p className="note">{t.note}</p>
+
+              <a 
+                className={`btn ${p.highlight ? 'btn-primary' : 'btn-outline'}`} 
+                href="#lead"
+                style={{ width: '100%', textAlign: 'center' }}
+              >
+                {p.cta}
+              </a>
+
+              <div className="note">{p.note}</div>
             </div>
           ))}
+        </div>
+
+        {/* Maintenance Retainers Section */}
+        <div className="retainers-wrapper">
+          <div className="retainers-head">
+            <h3>Optional Monthly Maintenance & Retainers</h3>
+            <p>For ongoing continuous design updates, seasonal promotions, and dedicated support beyond base hosting (₦25,000/mo).</p>
+          </div>
+          <div className="grid grid-2">
+            {retainers.map((r, idx) => (
+              <div className="card retainer-card" key={idx}>
+                <div className="retainer-header">
+                  <h4>{r.title}</h4>
+                  <span className="retainer-price">{r.price}</span>
+                </div>
+                <p>{r.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

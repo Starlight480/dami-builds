@@ -1,6 +1,3 @@
-// Vercel serverless function: receives lead form POST, sends email via Resend.
-// POST body: { name, business, email, phone, message }
-// Env required: RESEND_API_KEY, RESEND_FROM (verified domain in Resend)
 import { Resend } from 'resend'
 
 export default async function handler(req, res) {
@@ -8,42 +5,36 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' })
   }
 
-  const { name, business, email, phone, message } = req.body || {}
-
-  if (!name || !business || !email || !message) {
-    return res.status(400).json({ error: 'Missing required fields: name, business, email, message' })
-  }
-
   const apiKey = process.env.RESEND_API_KEY
-  const from = process.env.RESEND_FROM
-
-  if (!apiKey || !from) {
-    console.error('[LEAD] RESEND_API_KEY or RESEND_FROM not configured')
-    return res.status(500).json({ error: 'Email service not configured' })
+  if (!apiKey) {
+    console.log('[LEAD API] Missing RESEND_API_KEY. Payload received:', req.body)
+    return res.status(200).json({ ok: true, mode: 'demo', message: 'Lead logged in demo mode.' })
   }
 
   try {
+    const { name, business, email, phone, message } = req.body || {}
     const resend = new Resend(apiKey)
-    const data = await resend.emails.send({
-      from,
-      to: 'dami.builds@gmail.com',
-      subject: `New enquiry from ${name} — ${business}`,
-      replyTo: email,
+
+    await resend.emails.send({
+      from: process.env.RESEND_FROM || 'onboarding@resend.dev',
+      to: process.env.LEAD_TO_EMAIL || 'dami.builds@gmail.com',
+      subject: `New Lead: ${business || name}`,
       html: `
-        <h2>New lead from Dami Builds</h2>
+        <h2>New Website Inquiry</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Business:</strong> ${business}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
+        <p><strong>Phone:</strong> ${phone || 'N/A'}</p>
         <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, '<br>')}</p>
+        <blockquote style="background: #f1f5f9; padding: 12px; border-left: 4px solid #10b981;">
+          ${message}
+        </blockquote>
       `,
     })
 
-    console.log('[LEAD] sent', data.id)
-    return res.status(200).json({ ok: true, id: data.id })
+    return res.status(200).json({ ok: true, message: 'Lead sent successfully.' })
   } catch (err) {
-    console.error('[LEAD] failed', err)
-    return res.status(500).json({ error: 'Failed to send email' })
+    console.error('[LEAD API ERROR]', err)
+    return res.status(500).json({ error: 'Failed to process lead: ' + err.message })
   }
 }

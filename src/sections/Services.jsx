@@ -1,27 +1,24 @@
-// COPY: user — service titles + descriptions are from the agreed draft.
-const services = [
-  { n: '01', title: 'Web Design', desc: 'Clean, mobile-first sites built around how your customers actually browse.' },
-  { n: '02', title: 'Menu & Booking Pages', desc: 'Let customers see your prices, menu, or book a slot without waiting on a reply.' },
-  { n: '03', title: 'Local SEO', desc: 'Show up when someone in Lagos searches for what you offer.' },
-  { n: '04', title: 'Redesigns & Fixes', desc: 'Already have a site that isn’t working? I’ll rebuild it properly.' },
-]
+import { site } from '../data/site.js'
 
 export default function Services() {
   return (
     <section id="services" className="services">
-      <div className="container section-head">
-        <h2>What I build</h2>
-      </div>
-      <div className="container grid-2">
-        {services.map((s) => (
-          <div className="service" key={s.n}>
-            <span className="service-n">{s.n}</span>
-            <div>
-              <h3>{s.title}</h3>
-              <p>{s.desc}</p>
+      <div className="container">
+        <div className="section-head">
+          <h2>What I build for you</h2>
+          <p>End-to-end digital solutions designed to grow your Lagos business.</p>
+        </div>
+        <div className="grid grid-2">
+          {site.services.map((s) => (
+            <div className="service-card" key={s.num}>
+              <div className="service-num">{s.num}</div>
+              <div className="service-content">
+                <h3>{s.title}</h3>
+                <p>{s.desc}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   )

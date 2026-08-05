@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velvet & Silk Beauty Lounge — Luxury Hair & Spa in Victoria Island</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0d11;
+      --card-bg: #1a161f;
+      --pink: #ec4899;
+      --gold: #f472b6;
+      --text: #fdf2f8;
+      --muted: #a1a1aa;
+      --border: #2e2636;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; color: #fff; }
+    .header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; background: rgba(15, 13, 17, 0.95); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border); }
+    .brand { font-size: 1.5rem; font-weight: 700; color: var(--pink); text-decoration: none; letter-spacing: 1px; }
+    .hero { text-align: center; padding: 90px 20px; background: linear-gradient(rgba(15, 13, 17, 0.85), rgba(15, 13, 17, 0.95)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80') center/cover; }
+    .hero h1 { font-size: 3rem; margin-bottom: 14px; }
+    .hero p { max-width: 600px; margin: 0 auto 28px; font-size: 1.15rem; color: var(--muted); }
+    .btn { display: inline-block; background: var(--pink); color: #fff; padding: 14px 30px; border-radius: 999px; font-weight: 600; text-decoration: none; border: none; cursor: pointer; }
+    .btn:hover { background: #db2777; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+    .service-box { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 28px; }
+    .service-box h3 { font-size: 1.3rem; margin-bottom: 6px; }
+    .price { color: var(--pink); font-weight: 700; font-size: 1.1rem; margin-bottom: 10px; display: block; }
+    footer { text-align: center; padding: 36px; background: #080709; border-top: 1px solid var(--border); color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="brand">VELVET & SILK</a>
+    <a href="#book" class="btn" style="padding: 10px 22px; font-size: 0.9rem;">Book Appointment</a>
+  </header>
+
+  <section class="hero">
+    <h1>Luxury Hair Styling & Spa Care</h1>
+    <p>Premium wig installations, knotless braids, luxury bridal styling, and relaxing facials in Victoria Island, Lagos.</p>
+    <a href="#book" class="btn">View Treatments & Book</a>
+  </section>
+
+  <div class="container">
+    <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 40px;">Treatment Menu</h2>
+    <div class="grid">
+      <div class="service-box">
+        <h3>HD Lace Frontal Install & Customization</h3>
+        <span class="price">₦45,000</span>
+        <p>Flawless lace melting, bleaching knots, plucked hairline, and silk press styling.</p>
+      </div>
+      <div class="service-box">
+        <h3>Boho Knotless Braids (Full Length)</h3>
+        <span class="price">₦38,000</span>
+        <p>Lightweight tension-free braids with premium human hair curl inserts.</p>
+      </div>
+      <div class="service-box">
+        <h3>Silk Press & Deep Conditioning Spa</h3>
+        <span class="price">₦25,000</span>
+        <p>Hydrating steam treatment, scalp massage, and sleek heat styling for natural hair.</p>
+      </div>
+      <div class="service-box">
+        <h3>Luxury Glow Facial & Relaxation Spa</h3>
+        <span class="price">₦35,000</span>
+        <p>Deep pore cleansing, LED light therapy, and hydrating hyaluronic mask treatment.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer id="book">
+    <p>📍 12B Bishop Oluwole Street, Victoria Island, Lagos | Tue-Sun: 9:00AM - 7:00PM</p>
+    <p style="margin-top: 6px; font-size: 0.85rem;">© Velvet & Silk Beauty Lounge — Built by Dami Builds</p>
+  </footer>
+</body>
+</html>

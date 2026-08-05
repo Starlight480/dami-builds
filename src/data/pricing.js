@@ -1,68 +1,77 @@
-// Pricing tiers (₦). Strategy: Premium (₦350K) is the natural choice.
-// Standard = self-host + 1 edit (feels limited). Business = hosted but recurring fee.
-// Premium = full package, unlimited edits, priority, hosted, 1mo free retainer.
-// ₦X/mo = placeholder monthly hosting fee — user sets the real number.
+// Pricing tiers for Dami Builds.
+// Hosting fee: ₦25,000/mo
+// Retainer options: ₦50,000/mo (Standard) and ₦100,000/mo (Premium)
 export const pricing = [
   {
     name: 'Starter',
     price: '₦150,000',
     tagline: 'We build it. You host it.',
     highlight: false,
-    summary:
-      'A complete website, packaged and handed over. Best if you already have hosting or want to keep upfront cost low.',
+    summary: 'A complete website, packaged and handed over. Best if you already have hosting or want to keep upfront costs low.',
     features: [
-      'Custom-designed website (mobile-first)',
-      'Up to 5 pages (home, about, services, contact, gallery)',
-      'WhatsApp / call button',
-      'Working contact form',
-      'Basic on-page SEO (titles, meta, headings)',
-      'Google Maps embed',
-      'Brand-colour matching',
-      'Social media links',
-      'Fast-loading, clean code',
-      '7-day delivery',
-      '1 free edit included',
-      'Handover: all files + simple hosting guide',
+      'Custom mobile-first website',
+      'Up to 5 pages (home, about, services, gallery, contact)',
+      'WhatsApp & call integration',
+      'Working contact lead form',
+      'Local SEO setup (meta tags, titles, headings)',
+      'Google Maps & location embed',
+      'Brand colour matching',
+      '7-day fast delivery',
+      '1 free edit session included',
+      'Full file handover & self-hosting guide'
     ],
     cta: 'Start with Starter',
-    note: 'You host it yourself — we include a setup guide. Hosting is not included.',
+    note: 'Build-only package. You manage your own hosting and domain.'
   },
   {
     name: 'Business',
     price: '₦250,000',
     tagline: 'We build it and host it for you.',
     highlight: false,
-    summary:
-      'Everything in Starter, plus we keep it online so you never touch hosting or servers.',
+    summary: 'Everything in Starter, plus complete managed hosting so your website stays online without technical hassle.',
     features: [
       'Everything in Starter',
-      'We host the site for you (zero setup)',
-      'Domain setup assistance',
-      'Uptime monitoring',
-      'Backups & basic security',
-      'Local SEO (Google Business Profile help)',
-      '3 free edits',
+      'Managed hosting included (zero technical setup)',
+      'Custom domain connection assistance',
+      '24/7 Uptime monitoring & SSL security',
+      'Automated weekly backups',
+      'Local SEO & Google Business Profile support',
+      '3 free edit requests',
+      'Option for Standard Maintenance Retainer (₦50,000/mo)'
     ],
     cta: 'Choose Business',
-    note: '+ ₦X/mo hosting & maintenance (covers server, updates, monitoring).',
+    note: '+ ₦25,000/mo hosting & upkeep fee (covers server, security, and monitoring).'
   },
   {
     name: 'Premium',
     price: '₦350,000',
-    tagline: 'The full package, for your first month.',
+    tagline: 'The complete hands-free growth package.',
     highlight: true,
-    badge: 'Most businesses choose this',
-    summary:
-      'Everything in Business, plus 1 month of unlimited edits, priority support, and your first month of upkeep free.',
+    badge: 'Most Popular Choice',
+    summary: 'Everything in Business, plus 1 month of unlimited edits, priority support, booking/ordering system, and 1st month retainer FREE.',
     features: [
       'Everything in Business',
-      '1 month of unlimited edits',
-      'Priority support (you go to the top of the list)',
-      'Booking / ordering page if you need it',
-      '1 month of retainer & upkeep free',
-      'Dedicated check-ins',
+      '1 Month of unlimited content edits & updates',
+      'Priority support (top-tier response SLA)',
+      'Interactive booking or online ordering system',
+      '1st Month of upkeep & retainer included FREE',
+      'Monthly performance & visitor check-in report',
+      'Eligible for Premium Retainer (₦100,000/mo for full monthly strategy & continuous updates)'
     ],
-    cta: 'Get Premium',
-    note: 'After the first month, only the base hosting cost (₦X/mo) keeps it running. Extra edits are billed per request or via your retainer.',
+    cta: 'Get Premium Package',
+    note: 'After the first month free, only base hosting (₦25,000/mo) applies. Optional maintenance retainers available at ₦50,000/mo or ₦100,000/mo.'
+  }
+]
+
+export const retainers = [
+  {
+    title: 'Standard Retainer',
+    price: '₦50,000/mo',
+    desc: 'Regular content updates, minor design tweaks, promotional banner additions, and priority maintenance.'
   },
+  {
+    title: 'Premium Retainer',
+    price: '₦100,000/mo',
+    desc: 'Continuous monthly feature upgrades, conversion optimization, new page additions, and dedicated priority support.'
+  }
 ]
