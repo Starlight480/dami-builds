@@ -3,7 +3,7 @@ import { useState } from 'react'
 // Lead form: posts to a serverless endpoint (Vite config VITE_LEAD_ENDPOINT).
 // The Resend API key lives ONLY in that endpoint (server-side) — never imported here.
 // Until the endpoint is supplied, it logs the payload and shows a success UI (no key in bundle).
-const ENDPOINT = (import.meta.env && import.meta.env.VITE_LEAD_ENDPOINT) || ''
+const ENDPOINT = (import.meta.env && import.meta.env.VITE_LEAD_ENDPOINT) || '/api/lead'
 
 export default function LeadForm() {
   const [status, setStatus] = useState({ type: '', msg: '' })
