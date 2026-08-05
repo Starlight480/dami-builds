@@ -5,7 +5,7 @@ import TrustBar from './sections/TrustBar.jsx'
 import ValueProp from './sections/ValueProp.jsx'
 import Services from './sections/Services.jsx'
 import CaseStudies from './sections/CaseStudies.jsx'
-import Showcase from './sections/Showcase.jsx'
+import About from './sections/About.jsx'
 import Pricing from './sections/Pricing.jsx'
 import FAQ from './sections/FAQ.jsx'
 import LeadForm from './sections/LeadForm.jsx'
@@ -23,7 +23,7 @@ export default function App() {
           <nav>
             <a href="#services">Services</a>
             <a href="#work">Work</a>
-            <a href="#examples">Examples</a>
+            <a href="#about">About</a>
             <a href="#pricing">Pricing</a>
             <a href="#faq">FAQ</a>
             <a className="btn btn-primary btn-sm" href="#lead">
@@ -38,7 +38,7 @@ export default function App() {
         <ValueProp />
         <Services />
         <CaseStudies />
-        <Showcase />
+        <About />
         <Pricing />
         <FAQ />
         <LeadForm />
