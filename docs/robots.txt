@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://starlight480.github.io/dami-builds/sitemap.xml

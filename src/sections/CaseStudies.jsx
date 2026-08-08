@@ -22,14 +22,6 @@ const cases = [
     url: 'https://starlight480.github.io/iamfit-mockup',
     tag: 'Fitness',
     img: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80'
-  },
-  {
-    name: 'Tasala Hair Salon',
-    type: 'Luxury Beauty & Styling',
-    desc: 'Sleek hair service gallery, treatment menu, and direct appointment booking interface.',
-    url: 'https://starlight480.github.io/tasala-salon/',
-    tag: 'Beauty & Salon',
-    img: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=600&q=80'
   }
 ]
 
