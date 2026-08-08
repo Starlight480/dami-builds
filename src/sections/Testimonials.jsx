@@ -5,11 +5,6 @@ const quotes = [
     company: 'Piano Bistro, Lekki'
   },
   {
-    q: 'Before the website, 80% of our day was spent answering Instagram DMs asking for hair service prices. Now customers check the site and come straight to book.',
-    name: 'Bisi Adegoke',
-    company: 'Tasala Hair & Beauty, Victoria Island'
-  },
-  {
     q: 'The mobile responsiveness is top notch. Most of our gym members access our class schedule on their phones, and the site loads instantly on mobile networks.',
     name: 'Coach Emeka',
     company: 'IAMFit Studio, Ajah'
